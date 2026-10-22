@@ -1,0 +1,168 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background: #f3f6f8;
+  color: #1c2430;
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+h1,
+h2,
+h3,
+p,
+a,
+li {
+  overflow-wrap: break-word;
+}
+
+.skip {
+  position: absolute;
+  left: 0.5rem;
+  top: -3rem;
+  background: #fff;
+  color: #123;
+  padding: 0.4rem 0.7rem;
+}
+
+.skip:focus {
+  top: 0.5rem;
+  z-index: 5;
+}
+
+header {
+  background: #1b3a4b;
+  color: #fff;
+  padding: 1.25rem 1rem;
+}
+
+header p,
+header h1 {
+  margin: 0;
+}
+
+header p {
+  margin-bottom: 0.35rem;
+}
+
+header h1 {
+  font-size: 1.7rem;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0.75rem 1rem;
+  background: #163044;
+}
+
+.menu a {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  background: #24556f;
+  padding: 0.45rem 0.75rem;
+  border-radius: 6px;
+}
+
+.menu a:hover {
+  background: #1a4156;
+}
+
+a:focus {
+  outline: 3px solid #f0c14b;
+  outline-offset: 2px;
+}
+
+main {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+section {
+  margin-bottom: 1.5rem;
+}
+
+.kartat {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.karte {
+  min-width: 0;
+  background: #fff;
+  border: 1px solid #d5dee8;
+  border-radius: 8px;
+}
+
+.karte img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px 8px 0 0;
+}
+
+.teksti {
+  padding: 0.2rem 0.9rem 0.9rem;
+}
+
+.kategori {
+  margin: 0.7rem 0 0.2rem;
+  color: #0b6b45;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.karte h3 {
+  margin: 0.2rem 0 0.4rem;
+  font-size: 1.15rem;
+}
+
+.orar {
+  margin: 0 0 0.4rem;
+  color: #4d5966;
+}
+
+.karte p {
+  margin: 0.35rem 0;
+}
+
+.karte a {
+  display: inline-block;
+  margin: 0.4rem 0;
+  color: #0f5c75;
+  font-weight: 700;
+}
+
+
+
+
+@media (min-width: 600px) {
+  .kartat {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 900px) {
+  .kartat {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
