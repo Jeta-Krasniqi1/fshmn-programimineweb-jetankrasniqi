@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="sq">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Demonstrimi kaloi</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="skip" href="#main">Kalo te përmbajtja</a>
+    <main id="main">
+      <h1>Demonstrimi kaloi</h1>
+      <hr />
+      <p class="shenim">
+        Të dhënat erdhën me GET dhe duken në URL pas shenjës ?. Nuk u ruajt
+        asnjë regjistrim në server. Janë vetëm të dhëna të sajuara.
+      </p>
+      <dl id="rezultati"></dl>
+      <p><a href="index.html">Kthehu te formulari</a></p>
+    </main>
+    <script>
+      const emra = [
+        ["pseudonimi", "Pseudonimi"],
+        ["email", "Email"],
+        ["persona", "Persona"],
+        ["kategoria", "Kategoria"],
+        ["rregullat", "Rregullat"],
+      ];
+      const params = new URLSearchParams(location.search);
+      const lista = document.getElementById("rezultati");
+
+      for (const [celesi, etiketa] of emra) {
+        const dt = document.createElement("dt");
+        const dd = document.createElement("dd");
+        dt.textContent = etiketa;
+        dd.textContent = params.get(celesi) || "(bosh)";
+        lista.append(dt, dd);
+      }
+    </script>
+  </body>
+</html>

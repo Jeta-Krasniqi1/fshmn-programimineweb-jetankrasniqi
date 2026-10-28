@@ -1,0 +1,157 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #eef3f7;
+  color: #1c2834;
+  font-family: system-ui, sans-serif;
+  line-height: 1.4;
+}
+
+.skip {
+  position: absolute;
+  left: -999px;
+  top: 0;
+}
+
+.skip:focus {
+  left: 1rem;
+  top: 1rem;
+  background: #fff;
+  padding: 0.4rem 0.6rem;
+  z-index: 1;
+}
+
+main {
+  max-width: 740px;
+  margin: 0 auto;
+  padding: 1.6rem 1.4rem 2.4rem;
+}
+
+h1 {
+  margin: 0 0 0.55rem;
+  color: #152033;
+  font-size: 1.7rem;
+}
+
+hr {
+  border: 0;
+  border-top: 3px solid #1a6b66;
+  margin: 0 0 1.3rem;
+}
+
+.shenim {
+  margin: 0 0 1.15rem;
+}
+
+.fushe {
+  margin-bottom: 0.95rem;
+}
+
+label,
+legend {
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"] {
+  display: block;
+  padding: 0.38rem 0.45rem;
+  border: 1px solid #c5ced6;
+  border-radius: 3px;
+  background: #fff;
+  font: inherit;
+  color: inherit;
+}
+
+input[type="text"],
+input[type="email"] {
+  width: 14.5rem;
+}
+
+input[type="number"] {
+  width: 4.4rem;
+}
+
+fieldset {
+  margin: 0.3rem 0 0.95rem;
+  padding: 0.55rem 0.8rem 0.7rem;
+  border: 1px solid #c5ced6;
+  background: transparent;
+}
+
+fieldset label {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0.28rem 0;
+}
+
+.prano {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin: 0.2rem 0 1rem;
+}
+
+button {
+  background: #1c7a52;
+  color: #fff;
+  border: 0;
+  border-radius: 4px;
+  padding: 0.5rem 0.85rem;
+  font: inherit;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #166444;
+}
+
+table {
+  width: 100%;
+  margin-top: 1.3rem;
+  border-collapse: collapse;
+  background: #fff;
+}
+
+caption {
+  caption-side: top;
+  margin-bottom: 0.35rem;
+  text-align: center;
+  color: #334155;
+}
+
+th,
+td {
+  border: 1px solid #b7c3ce;
+  padding: 0.42rem 0.6rem;
+  text-align: left;
+}
+
+th {
+  background: #f7f9fb;
+  font-weight: 700;
+}
+
+dl {
+  margin: 0 0 1.2rem;
+}
+
+dt {
+  font-weight: 700;
+  margin-top: 0.55rem;
+}
+
+dd {
+  margin: 0.1rem 0 0;
+}
+
+a {
+  color: #145c45;
+}

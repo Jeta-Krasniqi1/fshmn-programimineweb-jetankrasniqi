@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="sq">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Regjistro misionin</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="skip" href="#main">Kalo te përmbajtja</a>
+    <main id="main">
+      <h1>Regjistro misionin</h1>
+      <hr />
+
+      <p class="shenim">
+        Demonstrim lokal: përdor vetëm të dhëna të sajuara. Nuk kryhet regjistrim real.
+      </p>
+
+      <!--
+        Hyrje: pseudonim, email, persona, kategori, pranim.
+        Dalje: pranuar.html me GET. Vlerat dalin ne URL. Serveri nuk ruan asgje.
+        Normal: Mira, student@example.org, 3, Art, pranoj -> kalon.
+        Kufi 1: forme bosh -> nuk kalon.
+        Kufi 2: email pa format ose persona 0 / 6 -> nuk kalon.
+      -->
+      <form action="pranuar.html" method="get">
+        <div class="fushe">
+          <label for="pseudonimi">Pseudonimi (3–20 karaktere)</label>
+          <input
+            id="pseudonimi"
+            name="pseudonimi"
+            type="text"
+            minlength="3"
+            maxlength="20"
+            required
+          />
+        </div>
+
+        <div class="fushe">
+          <label for="email">Email i sajuar</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            placeholder="student@example.org"
+            required
+          />
+        </div>
+
+        <div class="fushe">
+          <label for="persona">Persona (1–5)</label>
+          <input id="persona" name="persona" type="number" min="1" max="5" required />
+        </div>
+
+        <fieldset>
+          <legend>Kategoria</legend>
+          <label>
+            <input type="radio" name="kategoria" value="Art" required />
+            Art
+          </label>
+          <label>
+            <input type="radio" name="kategoria" value="Shkencë" />
+            Shkencë
+          </label>
+        </fieldset>
+
+        <label class="prano">
+          <input type="checkbox" name="rregullat" value="po" required />
+          I pranoj rregullat e demonstrimit
+        </label>
+
+        <button type="submit">Kontrollo formularin</button>
+      </form>
+
+      <table>
+        <caption>Oraret e misioneve</caption>
+        <thead>
+          <tr>
+            <th scope="col">Ora</th>
+            <th scope="col">Misioni</th>
+            <th scope="col">Vendi</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>10:00</td>
+            <td>Gjej shenjën</td>
+            <td>Oborri</td>
+          </tr>
+          <tr>
+            <td>12:00</td>
+            <td>Lexo hartën</td>
+            <td>Biblioteka</td>
+          </tr>
+          <tr>
+            <td>14:00</td>
+            <td>Zbulo objektin</td>
+            <td>Laboratori</td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+  </body>
+</html>
